@@ -1,0 +1,8 @@
+streamlit
+pypdf
+boto3
+python-dotenv
+langchain-core
+langchain-openai
+langgraph
+sentence-transformers

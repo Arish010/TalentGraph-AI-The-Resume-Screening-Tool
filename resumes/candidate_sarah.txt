@@ -1,0 +1,17 @@
+SARAH JENKINS - DATA SCIENTIST
+Email: sarah.j@example.com | Location: Manchester, UK
+
+PROFESSIONAL SUMMARY
+Data Scientist with 3+ years of experience extracting insights from complex business datasets. Strong proficiency in statistical modeling, exploratory data analysis (EDA), and creating predictive frameworks. Passionate about turning clean data into actionable visual dashboards.
+
+TECHNICAL SKILLS
+- Languages: Python, SQL, R
+- Frameworks: Scikit-learn, Pandas, NumPy, Statsmodels
+- Visualization: Tableau, PowerBI, Matplotlib
+
+PROFESSIONAL EXPERIENCE
+Data Analyst | Retail Analytics Corp
+- Built exploratory data analysis pipelines in Python to monitor key performance indicators across disparate retail datasets.
+- Cleaned and normalized transactional databases containing 500k+ records, improving data reliability standards.
+- Designed interactive PowerBI dashboards that reduced executive decision-making times by 20%.
+- Applied statistical inference and sampling techniques to design promotional A/B testing experiments.

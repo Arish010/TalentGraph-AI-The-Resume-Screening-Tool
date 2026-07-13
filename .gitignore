@@ -1,0 +1,17 @@
+# Local environment credentials
+.env
+
+# Python virtual environments
+venv/
+.venv/
+env/
+
+# Python caches and compiled files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.pytest_cache/
+
+# Streamlit local configurations
+.streamlit/config.toml

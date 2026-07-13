@@ -1,0 +1,17 @@
+EMILY CHANG - LEAD DATA ANALYST
+Email: emily.c@example.com | Location: London, UK
+
+PROFESSIONAL SUMMARY
+Result-driven Data Analyst with 3 years of commercial experience specializing in business intelligence, data warehousing, and product growth analytics. Proficient in translating complex datasets into interactive dashboards that align with cross-functional stakeholder requirements.
+
+TECHNICAL SKILLS
+- Languages: SQL (Advanced), Python, R
+- Tools: PowerBI, Tableau, Excel, Google Analytics
+- Methodologies: A/B Testing, Statistical Modeling, Data Cleansing, EDA
+
+PROFESSIONAL EXPERIENCE
+Data Analyst | FinTech Growth Hub
+- Managed data collection and normalization processes across disparate transaction records to ensure tracking traceability.
+- Designed and maintained corporate PowerBI dashboards, accelerating data-led decision-making for executive teams by 25%.
+- Implemented robust SQL queries and dbt workflows to extract, validate, and clean internal performance datasets.
+- Conducted regular exploratory data analysis and statistical inference to design, monitor, and interpret product A/B tests.

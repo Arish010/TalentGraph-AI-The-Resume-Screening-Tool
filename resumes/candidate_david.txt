@@ -1,0 +1,17 @@
+DAVID KOWALSKI - SENIOR MLOps ENGINEER
+Email: david.k@example.com | Location: London, UK
+
+PROFESSIONAL SUMMARY
+Senior Machine Learning DevOps Engineer focused on building, scaling, and deploying robust AI pipelines in cloud-native environments. Deep expertise in orchestrating reproducible pipelines, model monitoring, and automated version-controlled deployment structures.
+
+TECHNICAL SKILLS
+- AI & ML: TensorFlow, PyTorch, Scikit-learn, MLflow, Feature Engineering
+- DevOps & Cloud: AWS (EC2, S3), Docker, Git, Linux, CI/CD (GitHub Actions)
+- Data Systems: Python, SQL, Apache Spark, dbt
+
+PROFESSIONAL EXPERIENCE
+Cloud ML Engineer | CloudScale Systems
+- Engineered end-to-end containerized ML pipelines using Docker and deployed models across AWS EC2 staging nodes.
+- Integrated automated testing (Pytest) and CI/CD pipelines to monitor model drift and handle automated retraining loops.
+- Standardized machine learning platform architectures using Git version control and MLflow tracking tools.
+- Collaborated with engineering and data science teams to optimize model weights, reducing inference latency by 35%.

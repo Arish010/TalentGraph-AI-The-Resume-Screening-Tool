@@ -1,0 +1,17 @@
+JOHN MILLER - ENTERPRISE JAVA DEVELOPER
+Email: john.m@example.com | Location: Birmingham, UK
+
+PROFESSIONAL SUMMARY
+Senior Software Engineer with over 5 years of commercial experience specializing in backend architecture, enterprise web applications, and relational database management systems. Expert in object-oriented programming, microservices design patterns, and synchronous API builds.
+
+TECHNICAL SKILLS
+- Core Languages: Java, Spring Boot, C#
+- Databases: Oracle SQL, MySQL, Hibernate
+- Tools: Git, Jenkins, Maven, Jira, Agile/Scrum
+
+PROFESSIONAL EXPERIENCE
+Backend Engineer | NexaTech Solutions
+- Architected robust, scalable enterprise web applications processing thousands of concurrent queries daily.
+- Integrated external RESTful APIs and optimized database query execution plans to minimize latency.
+- Collaborated across cross-functional engineering teams utilizing Git version control and CI/CD deployment pipelines.
+- Authored extensive technical documentation for newly established microservice architectures.

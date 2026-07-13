@@ -1,0 +1,22 @@
+ARISH SHAIKH - AI & MACHINE LEARNING ENGINEER
+Email: arish@example.com | Location: London, UK
+
+PROFESSIONAL SUMMARY
+Highly analytical AI Engineer holding an MSc in Artificial Intelligence from Queen Mary University of London. Experienced in designing, training, and deploying scalable machine learning models and end-to-end data architectures. Proven track record of refactoring legacy code into modular Python packages and building robust automation pipelines.
+
+TECHNICAL SKILLS
+- Programming: Python (Expert), SQL (PostgreSQL), Bash, Linux
+- ML/Deep Learning: PyTorch, TensorFlow, Scikit-learn, XGBoost, Computer Vision, NLP
+- Tools & DevOps: Git, Docker, Pytest, CI/CD pipelines, PowerBI
+
+PROFESSIONAL EXPERIENCE
+AI/ML Engineer Intern | Apex Predictive Solutions
+- Refactored legacy machine learning scripts into modular Python packages, reducing technical debt.
+- Implemented automated unit tests using Pytest, catching 15+ critical production bugs.
+- Optimized geospatial models via Pandas vectorization, cutting inference latency by 30%.
+- Utilized Docker to guarantee 100% environment parity between local development and cloud staging servers.
+
+PROJECTS
+FakeSpotter: Deepfake Detection System
+- Designed an advanced CNN-LSTM pipeline using ResNet-50 for feature extraction, achieving 87% confidence accuracy in manipulation detection.
+- Optimized processing pipelines for 770+ videos using GPU acceleration, reducing inference latency by 30%.

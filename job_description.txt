@@ -1,0 +1,1 @@
+Looking for a Data Scientist or AI Engineer proficient in Python, SQL, and Machine Learning pipelines. Experience with PyTorch or Scikit-learn is required. Must be able to build and deploy scalable data architectures.
