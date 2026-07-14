@@ -9,12 +9,11 @@ class AgenticNodes:
         if not os.getenv("GROQ_API_KEY"):
             raise ValueError("CRITICAL: GROQ_API_KEY environment variable is not set.")
             
-        # Using Groq's high-performance llama-3.3 model
         self.llm = ChatOpenAI(
             openai_api_key=os.getenv("GROQ_API_KEY"),
             openai_api_base="https://api.groq.com/openai/v1",
             model="llama-3.3-70b-versatile",
-            temperature=0.3  # Slightly raised temperature for more natural, detailed writing
+            temperature=0.3  
         )
 
     def _execute_with_retry(self, chain, input_data, description="LLM Node"):
