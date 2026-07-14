@@ -6,7 +6,7 @@ TalentGraph AI is an enterprise-grade, cloud-integrated AI screening system buil
 
 ## Key Features
 
-* **Dual-Target Architecture:** * ** Candidate Mode (In-Memory Evaluation):** Designed for job seekers to upload a single resume (PDF/TXT) and receive brutally honest, structured critique and actionable bullet-point upgrades to optimize their profile.
+* **Dual-Target Architecture:** Candidate Mode (In-Memory Evaluation):** Designed for job seekers to upload a single resume (PDF/TXT) and receive brutally honest, structured critique and actionable bullet-point upgrades to optimize their profile.
   * **HR / Recruiter Mode (Cloud Batch Screening):** Connected directly to an **AWS S3 data lake** to download, evaluate, and output a mathematically sorted leaderboard ranking hundreds of candidates against a dynamic Job Description.
 * **State-Driven Multi-Agent Flow:** Orchestrated using a cyclic state-machine to manage shared memory states between specialized parser and evaluator agents.
 * **Hybrid Scoring Engine:** Combines dense semantic similarity scores using **Sentence-Transformer embeddings** with traditional, deterministic token keyword tracking.
