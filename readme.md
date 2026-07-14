@@ -50,4 +50,4 @@ streamlit run app.py
 
 ## Creator
 ## Designed, Engineered, and Maintained by 
-#Arish Abdulgani Shaikh
+# Arish Abdulgani Shaikh
