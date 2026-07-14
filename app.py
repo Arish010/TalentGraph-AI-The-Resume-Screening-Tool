@@ -5,21 +5,17 @@ import streamlit as st
 from dotenv import load_dotenv
 from pypdf import PdfReader
 
-# Load local .env file securely
 load_dotenv()
 
-# Import your custom modules
 from s3_service import S3Service
 from app_graph import create_resume_screening_graph
 
-# 1. Page Configuration & Styling
 st.set_page_config(
     page_title="TalentGraph AI",
     page_icon="⚙️",
     layout="wide"
 )
 
-# Custom CSS for a modern dark/clean aesthetic + premium button styling
 st.markdown("""
     <style>
     .main { background-color: #0e1117; }
@@ -39,7 +35,6 @@ st.markdown("""
     </style>
 """, unsafe_allow_html=True)
 
-# 2. Initialize Backend Clients
 BUCKET_NAME = "resume-screening-system-arish"
 
 @st.cache_resource
@@ -55,7 +50,6 @@ except Exception as e:
     st.error(f"Failed to initialize cloud backends. Ensure your .env has correct keys. Error: {e}")
     st.stop()
 
-# Initialize Session State for S3 candidate files
 if "s3_candidates" not in st.session_state:
     st.session_state.s3_candidates = []
 
@@ -67,7 +61,6 @@ def update_s3_candidate_list():
         if key.endswith(".txt") and key != "job_description.txt"
     ]
 
-# Run initial load if list is empty
 if not st.session_state.s3_candidates:
     update_s3_candidate_list()
 
@@ -86,26 +79,19 @@ def extract_text_from_pdf(pdf_bytes: bytes) -> str:
         st.error(f"PDF parsing error: {e}")
         return ""
 
-# ==========================================
-# SIDEBAR: PREMIUM BUTTON MODE SELECTION
-# ==========================================
 st.sidebar.title("🛠️ System Settings")
 st.sidebar.markdown("### Select System Mode")
 
-# Initialize app mode state if not set
 if "app_mode" not in st.session_state:
     st.session_state.app_mode = "👤 Candidate Mode"
 
-# Create two columns to act as clean visual toggle buttons
 col_cand, col_hr = st.sidebar.columns(2)
 
-# If Candidate button clicked
 if col_cand.button("👤 Candidate Mode", use_container_width=True, 
                  type="primary" if st.session_state.app_mode == "👤 Candidate Mode" else "secondary"):
     st.session_state.app_mode = "👤 Candidate Mode"
     st.rerun()
 
-# If HR button clicked
 if col_hr.button("💼 HR Mode", use_container_width=True, 
               type="primary" if st.session_state.app_mode == "💼 HR / Recruiter Mode" else "secondary"):
     st.session_state.app_mode = "💼 HR / Recruiter Mode"
@@ -114,7 +100,6 @@ if col_hr.button("💼 HR Mode", use_container_width=True,
 app_mode = st.session_state.app_mode
 st.sidebar.markdown("---")
 
-# HR specific S3 controls in sidebar if in HR Mode
 if app_mode != "👤 Candidate Mode":
     st.sidebar.info(f"Connected to AWS S3: `{BUCKET_NAME}`")
     st.sidebar.markdown("### 📤 S3 Batch Upload")
@@ -142,12 +127,10 @@ if app_mode != "👤 Candidate Mode":
                 if success:
                     st.sidebar.success("Uploaded successfully!")
                     st.cache_resource.clear()
-                    # Explicitly update state list and reload layout
                     update_s3_candidate_list()
                     time.sleep(1)
                     st.rerun()
 
-    # Dynamic Sync Button
     if st.sidebar.button("🔄 Sync S3 Bucket List", use_container_width=True):
         st.cache_resource.clear()
         update_s3_candidate_list()
@@ -155,8 +138,7 @@ if app_mode != "👤 Candidate Mode":
         time.sleep(1)
         st.rerun()
 
-# 👤 CREATOR BRANDING FOOTER (Always visible at the bottom of the sidebar)
-st.sidebar.markdown("<br><br>" * 3, unsafe_allow_html=True) # Push to bottom
+st.sidebar.markdown("<br><br>" * 3, unsafe_allow_html=True) 
 st.sidebar.markdown("---")
 st.sidebar.markdown("""
     <div style="text-align: center; color: #8bc34a; font-size: 0.85rem;">
@@ -166,9 +148,6 @@ st.sidebar.markdown("""
     </div>
 """, unsafe_allow_html=True)
 
-# ==========================================
-# MODE 1: CANDIDATE MODE (Local In-Memory)
-# ==========================================
 if app_mode == "👤 Candidate Mode":
     st.title("🤖 TalentGraph AI: Candidate Feedback Center")
     st.write("Upload your resume and target job description to receive instant matching scores and detailed improvements.")
@@ -246,9 +225,6 @@ if app_mode == "👤 Candidate Mode":
                     st.markdown("### 💬 AI Agent Recommendation & Improvement Coach")
                     st.markdown(final_state['insight'].strip())
 
-# ==========================================
-# MODE 2: HR / RECRUITER MODE (S3 Cloud-Native)
-# ==========================================
 else:
     st.title("💼 TalentGraph AI: HR Batch Screener")
     st.write("Compare multiple candidates currently stored inside your AWS S3 data bucket against a target requirement sheet.")
@@ -269,7 +245,6 @@ else:
     with col2:
         st.header("👥 AWS S3 Queue")
         
-        # Pull candidate list from Session State
         candidate_keys = st.session_state.s3_candidates
         
         if not candidate_keys:
