@@ -33,14 +33,14 @@ git clone [https://github.com/Arish010/talentgraph-ai.git](https://github.com/Ar
 cd talentgraph-ai
 ```
 
-2. Configure Environment Secrets
+### 2. Configure Environment Secrets
 Create an uncommitted file named strictly .env in the root directory to store your private developer console access keys:
 GROQ_API_KEY=your_groq_api_key_here
 AWS_ACCESS_KEY_ID=your_aws_access_key_id_here
 AWS_SECRET_ACCESS_KEY=your_aws_secret_access_key_here
 AWS_DEFAULT_REGION=eu-west-2
 
-3. Initialize and Launch the Application
+### 3. Initialize and Launch the Application
 Install all frozen core pipeline dependencies and spin up the local web deployment application container:
 
 Bash
